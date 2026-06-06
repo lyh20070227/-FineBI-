@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>运动康复视频近5年B站播放情况数据分析</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+        body {
+            background-color: #f7faf9;
+            color: #333;
+            line-height: 1.8;
+        }
+        .wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            background-color: #249278;
+            color: #ffffff;
+            padding: 45px 30px;
+            border-radius: 14px;
+            text-align: center;
+            margin-bottom: 36px;
+        }
+        header h1 {
+            font-size: 33px;
+            margin-bottom: 14px;
+        }
+        .card {
+            background: #fff;
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 2px 14px #e5eeeb;
+            margin-bottom: 32px;
+        }
+        .card h2 {
+            color: #249278;
+            border-left: 6px solid #249278;
+            padding-left: 12px;
+            margin-bottom: 18px;
+        }
+        .img-box {
+            margin:22px 0;
+            text-align:center;
+        }
+        .img-box img {
+            width:100%;
+            border-radius:8px;
+            border:1px solid #eee;
+        }
+        .link-fine {
+            display:inline-block;
+            background:#249278;
+            color:#fff;
+            padding:12px 30px;
+            border-radius:7px;
+            text-decoration:none;
+            margin-top:15px;
+        }
+        .link-fine:hover {
+            background:#1d7c65;
+        }
+        .result {
+            background:#f1f9f6;
+            padding:16px 20px;
+            border-radius:9px;
+            margin:13px 0;
+        }
+        footer {
+            margin-top:50px;
+            padding-top:30px;
+            border-top:1px solid #ddd;
+            text-align:center;
+            color:#555;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <!--顶部标题与项目概述-->
+    <header>
+        <h1>运动康复视频近5年B站播放情况数据分析</h1>
+        <p>项目概述：本项目采集2020-2025年B站运动康复科普短视频数据，原始有效数据超150条，经Excel清洗规整后在FineBI搭建多维度仪表盘，全周期视频累计总播放量59851016次，从年度播放趋势、点赞投币互动数据、流量分布维度完成数据分析。</p >
+    </header>
+
+    <!--项目介绍+FineBI超链接（已填你的本地地址）-->
+    <div class="card">
+        <h2>一、项目介绍</h2>
+        <p>在全民健身大环境下，运动损伤、颈肩腰腿痛人群持续增多，B站运动康复科普类内容逐年快速增长。本小组按照课程要求，完成全流程数据分析：RPA数据采集→Excel数据清洗→FineBI可视化建模→数据结论提炼，完整落地体育数据分析作业全环节。</p >
+        <a href="http://localhost:37799/webroot/decision/link/GQst" target="_blank" class="link-fine">点击跳转FineBI交互式仪表板</a >
+    </div>
+
+    <!--Excel数据说明-->
+    <div class="card">
+        <h2>二、Excel数据源处理说明</h2>
+        <p>原始采集字段：发布年份、视频标题、总播放量、点赞数、收藏数、投币数、UP主名称、视频时长、康复分类；</p >
+        <p>数据清洗操作：批量将“X万”文本格式换算为纯数字、剔除空白值与无关广告视频、统一年份标签与内容分类，生成标准化数据集用于可视化。</p >
+    </div>
+
+    <!--图表插入区域（关键）-->
+    <div class="card">
+        <h2>三、FineBI可视化成果展示</h2>
+        <div class="img-box">
+            <img src="C:\Users\29381\Desktop\新建文件夹 (2)\dashboard.png" alt="运动康复综合数据分析仪表盘">
+        </div>
+        <p>仪表盘包含：年度播放趋势折线图、各年份点赞柱状图、年度播放气泡分布图、投币环形占比图，汇总全周期总播放59851016，仪表盘支持年份筛选、组件联动查询。</p >
+    </div>
+
+    <!--3条数据分析结论（结合你的图表真实数据）-->
+    <div class="card">
+        <h2>四、数据分析核心洞察结论</h2>
+        <div class="result"><strong>洞察1：播放量呈双峰特征</strong>：2022年（1893.5万）、2025年（2121.6万）为两大播放峰值，2021、2024年播放量跌入低谷，用户关注度受运动伤病热点周期性影响。</div>
+        <div class="result"><strong>洞察2：用户点赞高度集中2022年</strong>：2022年点赞762137，远超其余所有年份，当年康复科普内容破圈传播，用户互动意愿最强。</div>
+        <div class="result"><strong>洞察3：流量资源两极分化</strong>：2022与2025两年贡献绝大多数播放流量，其余年份内容播放体量偏小，爆款康复视频产出高度集中。</div>
+    </div>
+
+    <!--页脚组员信息（固定）-->
+    <footer>
+        <p>©2026 体育数据分析课程大作业</p >
+        <p>小组成员：战博彦(组长)、李鑫、韩秀麟、李雨善、赵昱杨</p >
+    </footer>
+</div>
+</body>
+</html>
